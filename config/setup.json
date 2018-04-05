@@ -1,0 +1,27 @@
+{
+	"models": {
+		"USD": {
+			"namespace": "USD\\API\\Model\\",
+			"table": "usds",
+			"columns": {
+				"id": {
+					"type": "int",
+					"attributes": {
+						"primary": true,
+						"unsigned": true,
+						"null": false
+					}
+				},
+				"fecha": {
+					"type": "date"
+				},
+				"valor": {
+					"type": "double",
+					"attributes": {
+						"unsigned": true
+					}
+				}
+			}
+		}
+	}
+}
