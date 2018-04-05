@@ -28,7 +28,7 @@ class SIIGetter implements Getter
     public function __construct()
     {
         $this->getter = 'sii';
-        $this->client = new Client(['base_uri' => config('getters.' . $this->getter . '.url')]);
+        $this->client = new Client(['base_uri' => config('getters.usd.' . $this->getter . '.url')]);
     }
     /**
      * Gets the crawler for the web page according to the configuration file
@@ -37,7 +37,7 @@ class SIIGetter implements Getter
      */
     protected function getCrawler(int $year)
     {
-        $getter = 'getters.' . $this->getter;
+        $getter = 'getters.usd.' . $this->getter;
         $url = str_replace('<year>', $year, config($getter . '.part'));
         try {
             $request = $this->client->request('GET', $url);

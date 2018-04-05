@@ -13,11 +13,11 @@ class BCentralGetter implements Getter
     public function __construct()
     {
         $this->getter = 'bcentral';
-        $this->url = config('getters.' . $this->getter . '.url');
-        $this->params = config('getters.' . $this->getter . '.params');
+        $this->url = config('getters.usd.' . $this->getter . '.url');
+        $this->params = config('getters.usd.' . $this->getter . '.params');
         $this->vars = [];
-        if (count(config('getters.' . $this->getter . '.variables')) > 0) {
-          $this->vars = array_combine(config('getters.' . $this->getter . '.variables'), array_fill(0, count(config('getters.' . $this->getter . '.variables')) - 1, 0));
+        if (count(config('getters.usd.' . $this->getter . '.variables')) > 0) {
+          $this->vars = array_combine(config('getters.usd.' . $this->getter . '.variables'), array_fill(0, count(config('getters.usd.' . $this->getter . '.variables')) - 1, 0));
         }
     }
     public function get(int $year)

@@ -63,7 +63,7 @@ class USDParser
 	 */
 	public function findGetter(string $getter_name)
 	{
-		if ($class = config('getters.' . $getter_name . '.class')) {
+		if ($class = config('getters.usd.' . $getter_name . '.class')) {
 			return new $class();
 		}
 		return null;
@@ -74,7 +74,7 @@ class USDParser
 	 */
 	public function listGetters()
 	{
-		$data = config('getters');
+		$data = config('getters.usd');
 		$getters = [];
 		foreach ($data as $get) {
 			$getters []= new $get['class']();
