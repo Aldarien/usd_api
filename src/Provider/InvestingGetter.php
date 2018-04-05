@@ -13,9 +13,9 @@ class InvestingGetter implements Getter
     public function __construct()
     {
         $this->getter = 'investing';
-        $this->url = config('getters.' . $this->getter . '.url');
-        $this->params = config('getters.' . $this->getter . '.params');
-        $this->vars = array_combine(config('getters.' . $this->getter . '.variables'), [0, 0]);
+        $this->url = config('getters.usd.' . $this->getter . '.url');
+        $this->params = config('getters.usd.' . $this->getter . '.params');
+        $this->vars = array_combine(config('getters.usd.' . $this->getter . '.variables'), [0, 0]);
     }
     public function get(int $year)
     {
